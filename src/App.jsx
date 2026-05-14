@@ -470,7 +470,7 @@ function PlanCard({ plan, cadence, selected, onSelect }) {
       <p>{plan.audience}</p>
       <div className="price">
         <strong>Rs {price}</strong>
-        <span>/{cadence === "monthly" ? "month" : "week"}</span>
+        <span>{plan.name === "Single Order" ? "/order" : `/${cadence === "monthly" ? "month" : "week"}`}</span>
       </div>
       <ul>
         {plan.features.map((feature) => (
@@ -642,6 +642,12 @@ function BowlBuilder({ onBowlBuilt }) {
   });
   const [pulse, setPulse] = useState(0);
 
+  const getBowlImage = (base) => {
+    if (base.includes("Rice")) return "/assets/sattva_rice_bowl.png";
+    if (base === "Pasta") return "/assets/sattva_pasta_bowl.png";
+    return "/assets/sattva_salad_bowl.png";
+  };
+
   const message = `Hi Sattva Fresh, I want a custom bowl with ${selection.base}, ${selection.protein}, and ${selection.extras}.`;
 
   return (
@@ -654,7 +660,7 @@ function BowlBuilder({ onBowlBuilt }) {
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
-          <img src="/assets/sattva_smoothie.png" alt="Custom Sattva Fresh bowl preview" />
+          <img src={getBowlImage(selection.base)} alt="Custom Sattva Fresh bowl preview" />
           <span className="ingredient-dot dot-a">{selection.base}</span>
           <span className="ingredient-dot dot-b">{selection.protein}</span>
           <span className="ingredient-dot dot-c">{selection.extras}</span>
