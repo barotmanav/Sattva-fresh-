@@ -31,161 +31,146 @@ import {
   X,
 } from "lucide-react";
 
-const phoneNumber = "918160048752";
-const displayPhone = "8160048752";
+const phoneNumber = "919724555880";
+const displayPhone = "9724555880";
 
 const navItems = [
-  { label: "Lifestyle", href: "#lifestyle" },
-  { label: "Plans", href: "#plans" },
-  { label: "Ready to Cook", href: "#ready" },
-  { label: "Salad Sutra", href: "#salads" },
+  { label: "Goals", href: "#lifestyle" },
+  { label: "Subscriptions", href: "#plans" },
+  { label: "Menu", href: "#ready" },
   { label: "Smart Care", href: "smart-view" },
 ];
 
 const categories = [
   {
-    title: "Student Life",
-    icon: Home,
-    tag: "PG friendly",
-    copy: "Budget packs, simple cooking cuts, and salad days that make healthy eating realistic.",
-  },
-  {
-    title: "Gym Fuel",
+    title: "Weight Management",
     icon: Dumbbell,
-    tag: "Protein routine",
-    copy: "Paneer bowls, sprouts, broccoli, salad subscriptions, and goal-led weekly refills.",
+    tag: "Calorie friendly",
+    copy: "Clean ingredients, sugar-free smoothies, and calorie-aware bowls that keep you on track.",
   },
   {
-    title: "Office Health",
+    title: "Office Lunch",
     icon: HeartPulse,
     tag: "Desk lunch",
-    copy: "Fresh salad bowls and cut vegetables that save time before and after work.",
+    copy: "Fresh salad bowls and healthy sandwiches that save time and keep you energetic at work.",
   },
   {
-    title: "Family Fresh",
-    icon: Users,
-    tag: "Home rhythm",
-    copy: "Weekly vegetables, hygienic cuts, and predictable delivery for everyday kitchens.",
+    title: "Light Dinner",
+    icon: Moon,
+    tag: "Easy evenings",
+    copy: "Digestible, nutritious bowls for a guilt-free end to your day.",
+  },
+  {
+    title: "Protein-Friendly",
+    icon: Flame,
+    tag: "High protein",
+    copy: "Paneer, chickpeas, and protein-packed bowls for your post-workout recovery.",
   },
 ];
 
 const plans = [
   {
-    name: "Student Smart",
-    audience: "PG residents and bachelors",
-    weekly: 299,
-    monthly: 999,
-    badge: "Budget hero",
-    image: "/assets/real-salad-packed.png",
-    gallery: ["/assets/real-salad-packed.png", "/assets/real-cut-vegetables.png", "/assets/real-salad-close.png"],
+    name: "Single Order",
+    audience: "Craving a healthy meal",
+    weekly: 249,
+    monthly: 249,
+    badge: "Try us out",
+    image: "/assets/sattva_sandwich.png",
+    gallery: ["/assets/sattva_sandwich.png", "/assets/sattva_pasta_bowl.png", "/assets/sattva_salad_bowl.png"],
     description:
-      "A low-friction healthy plan for students and PG residents who need simple vegetables, easy bowls, and quick refill reminders without managing daily grocery stress.",
-    services: ["Weekly vegetable refill", "2 Salad Sutra bowls", "Quick-cook cut pack", "WhatsApp refill reminder"],
-    bestFor: ["PG students", "Bachelors", "Budget healthy eating"],
-    features: ["Weekly veg kit", "2 Salad Sutra bowls", "Quick-cook cuts", "WhatsApp reminders"],
+      "A great way to experience Sattva Fresh. Order any of our fresh salad bowls, sandwiches, or smoothies on demand.",
+    services: ["Fresh bowl delivery", "Healthy sandwiches", "Sugar-free smoothies", "WhatsApp ordering"],
+    bestFor: ["First timers", "Office lunch", "Healthy cravings"],
+    features: ["Fresh bowl delivery", "Healthy sandwiches", "Sugar-free smoothies", "WhatsApp ordering"],
   },
   {
-    name: "Daily Fresh",
-    audience: "Busy homes",
-    weekly: 449,
-    monthly: 1699,
-    badge: "Most balanced",
+    name: "Weekly Plan",
+    audience: "Busy professionals",
+    weekly: 1499,
+    monthly: 5999,
+    badge: "Most popular",
     featured: true,
-    image: "/assets/real-cut-vegetables.png",
-    gallery: ["/assets/real-cut-vegetables.png", "/assets/real-cut-vegetables-2.png", "/assets/real-salad-group.png"],
+    image: "/assets/sattva_pasta_bowl.png",
+    gallery: ["/assets/sattva_pasta_bowl.png", "/assets/sattva_rice_bowl.png", "/assets/sattva_salad_bowl.png"],
     description:
-      "A balanced family and working-person routine with fresh produce, hygienic cuts, predictable refills, and flexible pause controls.",
-    services: ["Fresh vegetable basket", "Cut vegetable packs", "Free Vadodara delivery", "Pause or resume plan"],
-    bestFor: ["Busy homes", "Office workers", "Weekly meal planning"],
-    features: ["Fresh vegetables", "Cut vegetable packs", "Free Vadodara delivery", "Pause anytime"],
+      "A balanced weekly routine with fresh bowls, predictable refills, and flexible pause controls for your busy lifestyle.",
+    services: ["Daily fresh bowl", "Variety of cuisines", "Free Ahmedabad delivery", "Pause or resume plan"],
+    bestFor: ["Busy professionals", "Office workers", "Weekly meal planning"],
+    features: ["Daily fresh bowl", "Variety of cuisines", "Free Ahmedabad delivery", "Pause anytime"],
   },
   {
-    name: "Gym Pro",
-    audience: "Fitness routines",
-    weekly: 599,
-    monthly: 2199,
-    badge: "Protein focused",
-    image: "/assets/real-salad-close.png",
-    gallery: ["/assets/real-salad-close.png", "/assets/real-salad-mix.png", "/assets/real-salad-covered.png"],
+    name: "Monthly Subscription",
+    audience: "Health enthusiasts",
+    weekly: 4999,
+    monthly: 19999,
+    badge: "Best value",
+    image: "/assets/sattva_salad_bowl.png",
+    gallery: ["/assets/sattva_salad_bowl.png", "/assets/sattva_sandwich.png", "/assets/sattva_salad_bowl.png"],
     description:
-      "A fitness-led Salad Sutra routine for people who want protein bowls, sprouts, paneer, greens, and health streak motivation.",
-    services: ["Protein salad menu", "Sprouts and paneer add-ons", "Calorie-aware bowls", "Healthy streak rewards"],
-    bestFor: ["Gym users", "Weight goals", "High-protein lunch"],
-    features: ["Protein salad menu", "Sprouts and paneer add-ons", "Calorie-aware bowls", "Streak rewards"],
-  },
-  {
-    name: "Family Fresh",
-    audience: "Weekly household planning",
-    weekly: 799,
-    monthly: 2899,
-    badge: "High value",
-    image: "/assets/real-salad-group.png",
-    gallery: ["/assets/real-salad-group.png", "/assets/real-cut-vegetables.png", "/assets/real-salad-mix.png"],
-    description:
-      "A higher-volume family plan for weekly vegetable planning, everyday cut options, weekend salad add-ons, and priority support.",
-    services: ["Family vegetable basket", "Daily cut options", "Weekend salad add-on", "Priority WhatsApp support"],
-    bestFor: ["Families", "Weekly cooking", "High value refills"],
-    features: ["Family veg basket", "Daily cut options", "Weekend salad add-on", "Priority support"],
-  },
+      "A complete healthy eating routine for those committed to their wellness goals, with priority support and streak rewards.",
+    services: ["Goal-oriented meals", "Custom bowl options", "Calorie-aware planning", "Healthy streak rewards"],
+    bestFor: ["Gym users", "Weight goals", "Consistency"],
+    features: ["Goal-oriented meals", "Custom bowl options", "Calorie-aware planning", "Streak rewards"],
+  }
 ];
 
-const productCategories = ["All", "Fresh", "Cut", "Ready Packs", "Salads"];
+const productCategories = ["All", "Salad Bowls", "Rice Bowls", "Sandwiches", "Smoothies"];
 
 const products = [
   {
-    name: "Fresh Vegetable Basket",
-    category: "Fresh",
-    time: "Same day",
-    stat: "12+ items",
-    image: "/assets/real-cut-vegetables-2.png",
-    copy: "Seasonal produce selected for daily cooking and weekly home planning.",
-  },
-  {
-    name: "Hygienic Cut Vegetables",
-    category: "Cut",
-    time: "Ready now",
-    stat: "Washed and packed",
-    image: "/assets/real-cut-vegetables.png",
-    copy: "Onion, capsicum, beans, carrot, beetroot, and everyday cuts for stress-free cooking.",
-  },
-  {
-    name: "10 Minute Meal Kit",
-    category: "Ready Packs",
-    time: "10 min prep",
-    stat: "Recipe card",
-    image: "/assets/real-salad-mix.png",
-    copy: "Pre-cut ingredients, spice guidance, and cooking flow for PG and office routines.",
-  },
-  {
-    name: "Salad Sutra Bowl",
-    category: "Salads",
+    name: "Spinach Rice Bowl",
+    category: "Rice Bowls",
     time: "Lunch ready",
-    stat: "Fresh bowl",
-    image: "/assets/real-salad-group.png",
-    copy: "Colorful, filling salads with corn, paneer, sprouts, olives, greens, and seasonal toppings.",
+    stat: "Green goodness",
+    image: "/assets/sattva_salad_bowl.png",
+    copy: "Vibrant spinach rice, bell peppers, broccoli, corn, tomatoes, baby corn, lettuce, and paneer with our signature herb dressing.",
   },
   {
-    name: "Gym Protein Salad",
-    category: "Salads",
-    time: "Post workout",
-    stat: "Protein add-ons",
-    image: "/assets/real-salad-close.png",
-    copy: "Paneer, sprouts, broccoli, cucumber, and crunchy fresh layers for fitness users.",
+    name: "Brown Rice Bowl",
+    category: "Rice Bowls",
+    time: "Lunch ready",
+    stat: "High fiber",
+    image: "/assets/sattva_rice_bowl.png",
+    copy: "Nutritious brown rice paired with fresh crunchy vegetables, roasted protein, and a zesty drizzle.",
   },
   {
-    name: "PG Survival Pack",
-    category: "Ready Packs",
-    time: "Weekly refill",
-    stat: "Low effort",
-    image: "/assets/real-salad-packed.png",
-    copy: "A compact mix of vegetables, cuts, and easy bowls made for shared kitchens.",
+    name: "Italian Pasta Bowl",
+    category: "Salad Bowls",
+    time: "15 min prep",
+    stat: "Fusion taste",
+    image: "/assets/sattva_pasta_bowl.png",
+    copy: "Guilt-free pasta bowl tossed in extra virgin olive oil, fresh veggies, and authentic Italian herbs.",
+  },
+  {
+    name: "Falafel Bowl",
+    category: "Salad Bowls",
+    time: "Lunch ready",
+    stat: "Protein rich",
+    image: "/assets/sattva_salad_bowl.png",
+    copy: "Crispy baked falafels with creamy hummus, fresh greens, olives, and Mediterranean toppings.",
+  },
+  {
+    name: "Pesto Vegetable Sandwich",
+    category: "Sandwiches",
+    time: "Quick bite",
+    stat: "Whole wheat",
+    image: "/assets/sattva_fresh_ingredients.png",
+    copy: "Crisp fresh veggies and premium basil pesto sauce layered inside toasted whole wheat artisan bread.",
+  },
+  {
+    name: "Blueberry Banana Smoothie",
+    category: "Smoothies",
+    time: "Instant energy",
+    stat: "Sugar-free",
+    image: "/assets/sattva_smoothie.png",
+    copy: "A delicious, completely sugar-free thick blend of antioxidant-rich blueberries and fresh banana.",
   },
 ];
 
 const bowlOptions = {
-  base: ["Lettuce", "Cucumber", "Corn", "Sprouts"],
-  protein: ["Paneer", "Chana", "Moong", "Cheese cubes"],
-  extras: ["Olives", "Tomato", "Carrot", "Mint"],
+  base: ["Brown Rice", "White Rice", "Pasta", "Lettuce"],
+  protein: ["Paneer", "Chickpeas", "Falafel", "Sprouts"],
+  extras: ["Olives", "Broccoli", "Bell Peppers", "Mushroom"],
 };
 
 const defaultSmartState = {
@@ -324,8 +309,8 @@ function Header({ onSmartCare, onHome, theme, onToggleTheme }) {
           <Leaf size={20} />
         </span>
         <span>
-          <strong>E Kitchens</strong>
-          <small>by Salad Sutra</small>
+          <strong>Sattva Fresh</strong>
+          <small>by Sattva Fresh</small>
         </span>
       </a>
 
@@ -341,11 +326,11 @@ function Header({ onSmartCare, onHome, theme, onToggleTheme }) {
         <button className="icon-button theme-toggle" type="button" onClick={onToggleTheme} aria-label="Toggle dark mode">
           <ThemeIcon size={18} />
         </button>
-        <a className="icon-button" href={`tel:${displayPhone}`} aria-label="Call E Kitchens">
+        <a className="icon-button" href={`tel:${displayPhone}`} aria-label="Call Sattva Fresh">
           <Phone size={18} />
         </a>
         <PrimaryButton
-          onClick={() => openWhatsApp("Hi E Kitchens, I want to order fresh vegetables or Salad Sutra bowls today.")}
+          onClick={() => openWhatsApp("Hi Sattva Fresh, I want to order fresh vegetables or Sattva Fresh bowls today.")}
           icon={MessageCircle}
         >
           Order Today
@@ -359,7 +344,7 @@ function Header({ onSmartCare, onHome, theme, onToggleTheme }) {
         <div className="mobile-menu">
           <div className="mobile-menu-panel">
             <div className="mobile-menu-top">
-              <strong>E Kitchens</strong>
+              <strong>Sattva Fresh</strong>
               <button type="button" aria-label="Close menu" onClick={() => setOpen(false)}>
                 <X size={22} />
               </button>
@@ -376,7 +361,7 @@ function Header({ onSmartCare, onHome, theme, onToggleTheme }) {
             </button>
             <PrimaryButton
               tone="dark"
-              onClick={() => openWhatsApp("Hi E Kitchens, please share today's menu and subscription plans.")}
+              onClick={() => openWhatsApp("Hi Sattva Fresh, please share today's menu and subscription plans.")}
               icon={MessageCircle}
             >
               WhatsApp Menu
@@ -400,28 +385,27 @@ function Hero() {
           className="hero-copy"
         >
           <span className="status-pill">
-            <ShieldCheck size={16} /> Hygienic cuts, fresh bowls, free Vadodara delivery
+            <ShieldCheck size={16} /> Fresh bowls, clean ingredients, free Ahmedabad delivery
           </span>
           <h1>Healthy Living Delivered Daily.</h1>
           <p>
-            E Kitchens brings fresh vegetables, cut packs, ready-to-cook bowls, and Salad Sutra subscriptions into one
-            premium health-food routine.
+            Sattva Fresh brings healthy salad bowls, rice bowls, sandwiches, smoothies, and flexible subscriptions into one premium health-food routine.
           </p>
           <div className="hero-actions">
             <PrimaryButton onClick={() => scrollToSection("#plans")}>Explore Plans</PrimaryButton>
             <PrimaryButton
               tone="light"
               icon={MessageCircle}
-              onClick={() => openWhatsApp("Hi E Kitchens, I want to order today. Please share fresh vegetables, cut packs, and Salad Sutra options.")}
+              onClick={() => openWhatsApp("Hi Sattva Fresh, I want to order today. Please share the menu.")}
             >
               Order Today
             </PrimaryButton>
           </div>
           <div className="hero-proof">
-            <span>Fresh vegetables</span>
-            <span>Cut vegetables</span>
-            <span>Ready-to-cook</span>
-            <span>Salad Sutra</span>
+            <span>Salad bowls</span>
+            <span>Rice bowls</span>
+            <span>Smoothies</span>
+            <span>Sandwiches</span>
           </div>
         </motion.div>
 
@@ -432,11 +416,11 @@ function Hero() {
           transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="halo-ring" />
-          <img src="/assets/premium-hero.png" alt="Futuristic E Kitchens healthy food platform visual" />
+          <img src="/assets/sattva_smoothie.png" alt="Futuristic Sattva Fresh healthy food platform visual" />
           <GlassCard className="hero-brand-plate">
-            <span>E Kitchens</span>
+            <span>Sattva Fresh</span>
             <strong>Fresh-cut health platform</strong>
-            <small>Vadodara daily delivery</small>
+            <small>Ahmedabad daily delivery</small>
           </GlassCard>
           <GlassCard className="nutrition-widget">
             <span>Today's bowl</span>
@@ -619,10 +603,11 @@ function ProductExperience({ onProductOrder }) {
       <div className="experience-shell">
         <div className="video-panel">
           <img className="media-backdrop" src="/assets/dark-ingredient-core.png" alt="Fresh vegetables and cut vegetables" />
-          <video src="/assets/cut-vegetables.mp4" autoPlay muted loop playsInline poster="/assets/dark-ingredient-core.png" />
+          <img className="media-backdrop" src="/assets/sattva_fresh_ingredients.png" alt="Fresh ingredients" />
+          <img src="/assets/sattva_fresh_ingredients.png" style={{width: "100%", height: "100%", objectFit: "cover"}} alt="Fresh ingredients" />
           <div className="video-overlay">
-            <span>Cut vegetables by E Kitchens</span>
-            <strong>Washed, cut, packed, delivered</strong>
+            <span>Fresh Ingredients</span>
+            <strong>Premium, clean, and healthy</strong>
           </div>
         </div>
         <div className="products-panel">
@@ -657,7 +642,7 @@ function BowlBuilder({ onBowlBuilt }) {
   });
   const [pulse, setPulse] = useState(0);
 
-  const message = `Hi Salad Sutra, I want a custom bowl with ${selection.base}, ${selection.protein}, and ${selection.extras}.`;
+  const message = `Hi Sattva Fresh, I want a custom bowl with ${selection.base}, ${selection.protein}, and ${selection.extras}.`;
 
   return (
     <div className="builder">
@@ -669,7 +654,7 @@ function BowlBuilder({ onBowlBuilt }) {
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
-          <img src="/assets/premium-hero.png" alt="Custom Salad Sutra bowl preview" />
+          <img src="/assets/sattva_smoothie.png" alt="Custom Sattva Fresh bowl preview" />
           <span className="ingredient-dot dot-a">{selection.base}</span>
           <span className="ingredient-dot dot-b">{selection.protein}</span>
           <span className="ingredient-dot dot-c">{selection.extras}</span>
@@ -718,24 +703,24 @@ function DailyRoutine() {
   const moments = [
     {
       time: "Morning",
-      title: "Vegetables are already planned",
+      title: "Start your day light & energized",
       icon: CalendarDays,
-      image: "/assets/real-cut-vegetables-2.png",
-      copy: "Weekly refills remove the daily question of what to cook.",
+      image: "/assets/sattva_fresh_ingredients.png",
+      copy: "Our sugar-free smoothies give you the perfect morning boost without the crash.",
     },
     {
       time: "Afternoon",
-      title: "A Salad Sutra bowl keeps lunch clean",
+      title: "A Sattva Fresh bowl keeps lunch clean",
       icon: Salad,
-      image: "/assets/real-salad-group.png",
-      copy: "Office users get colorful bowls without relying on random snacks.",
+      image: "/assets/sattva_salad_bowl.png",
+      copy: "Office users get colorful, filling bowls without relying on oily canteen food.",
     },
     {
       time: "Evening",
-      title: "Ready-to-cook packs reduce stress",
+      title: "Healthy dinners made completely effortless",
       icon: ChefHat,
-      image: "/assets/real-cut-vegetables.png",
-      copy: "Cut ingredients turn tired evenings into 10 minute cooking sessions.",
+      image: "/assets/sattva_fresh_ingredients.png",
+      copy: "Light salads and sandwiches turn tired evenings into nutritious, guilt-free dinners.",
     },
   ];
 
@@ -771,7 +756,7 @@ function DashboardPreview({ onSmartCare, smartData }) {
     <div className="dashboard-preview">
       <div className="dashboard-phone">
         <div className="phone-top">
-          <span>Hello, Vadodara</span>
+          <span>Hello, Ahmedabad</span>
           <Bell size={18} />
         </div>
         <div className="delivery-status">
@@ -832,7 +817,7 @@ function SmartCarePage({ smartData, theme, onToggleTheme, onBack, onPauseToggle,
           <span className="eyebrow">Smart Care dashboard</span>
           <h1>Your healthy routine, remembered.</h1>
           <p>
-            E Kitchens can track the plans, bowls, and packs users choose, then turn that history into refill prompts,
+            Sattva Fresh can track the plans, bowls, and packs users choose, then turn that history into refill prompts,
             pause controls, and fast reorders.
           </p>
           <div className="hero-actions">
@@ -860,7 +845,7 @@ function SmartCarePage({ smartData, theme, onToggleTheme, onBack, onPauseToggle,
           <Bell size={26} />
           <span>Smart alert</span>
           <h3>Your weekly veggie stock may be ending soon.</h3>
-          <p>Based on your past used items, E Kitchens can remind you before your fridge goes empty.</p>
+          <p>Based on your past used items, Sattva Fresh can remind you before your fridge goes empty.</p>
           <PrimaryButton icon={RefreshCcw} onClick={onReorder}>
             Reorder refill
           </PrimaryButton>
@@ -881,12 +866,12 @@ function SmartCarePage({ smartData, theme, onToggleTheme, onBack, onPauseToggle,
           {smartData.customBowl ? (
             <>
               <h3>{smartData.customBowl.base}, {smartData.customBowl.protein}, {smartData.customBowl.extras}</h3>
-              <p>Your last Salad Sutra custom bowl is ready for a one-tap reorder.</p>
+              <p>Your last Sattva Fresh custom bowl is ready for a one-tap reorder.</p>
             </>
           ) : (
             <>
               <h3>No custom bowl saved yet.</h3>
-              <p>Build one from the Salad Sutra section and it will appear here.</p>
+              <p>Build one from the Sattva Fresh section and it will appear here.</p>
             </>
           )}
         </article>
@@ -897,12 +882,24 @@ function SmartCarePage({ smartData, theme, onToggleTheme, onBack, onPauseToggle,
 
 function PlanDetailsPage({ plan, cadence, theme, onToggleTheme, onBack, onBookNow, onSmartCare }) {
   const price = cadence === "monthly" ? plan.monthly : plan.weekly;
+  const reduceMotion = useReducedMotion();
 
   return (
-    <main className="detail-page">
+    <motion.main 
+      className="detail-page"
+      initial={reduceMotion ? false : { opacity: 0 }}
+      animate={reduceMotion ? false : { opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Header onSmartCare={onSmartCare} onHome={onBack} theme={theme} onToggleTheme={onToggleTheme} />
       <section className="detail-hero">
-        <div className="detail-copy">
+        <motion.div 
+          className="detail-copy"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        >
           <span className="eyebrow">{plan.badge}</span>
           <h1>{plan.name}</h1>
           <p>{plan.description}</p>
@@ -910,7 +907,10 @@ function PlanDetailsPage({ plan, cadence, theme, onToggleTheme, onBack, onBookNo
             <strong>Rs {price}</strong>
             <span>/{cadence === "monthly" ? "month" : "week"}</span>
           </div>
-          <div className="hero-actions">
+          <div className="hero-actions" style={{ flexWrap: "wrap" }}>
+            <PrimaryButton tone="light" icon={ArrowRight} onClick={onBack}>
+              Back to plans
+            </PrimaryButton>
             <PrimaryButton icon={MessageCircle} onClick={() => onBookNow(plan, cadence)}>
               Book Now
             </PrimaryButton>
@@ -918,18 +918,23 @@ function PlanDetailsPage({ plan, cadence, theme, onToggleTheme, onBack, onBookNo
               Connect Smart Care
             </PrimaryButton>
           </div>
-        </div>
-        <div className="detail-main-image">
-          <img src={plan.image} alt={`${plan.name} E Kitchens plan`} />
+        </motion.div>
+        <motion.div 
+          className="detail-main-image"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <img src={plan.image} alt={`${plan.name} Sattva Fresh plan`} />
           <GlassCard className="detail-floating-card">
             <span>Includes</span>
             <strong>{plan.services[0]}</strong>
-            <small>Free Vadodara delivery support</small>
+            <small>Free Ahmedabad delivery support</small>
           </GlassCard>
-        </div>
+        </motion.div>
       </section>
 
-      <section className="detail-section">
+      <MotionSection id="detail-visuals" className="detail-section">
         <div className="section-heading">
           <span className="eyebrow">Real service visuals</span>
           <h2>What this plan looks like in daily life.</h2>
@@ -942,9 +947,9 @@ function PlanDetailsPage({ plan, cadence, theme, onToggleTheme, onBack, onBookNo
             </article>
           ))}
         </div>
-      </section>
+      </MotionSection>
 
-      <section className="detail-section detail-service-grid">
+      <MotionSection id="detail-services" className="detail-section detail-service-grid">
         <article>
           <span className="eyebrow">Services</span>
           <h2>Everything included.</h2>
@@ -969,9 +974,9 @@ function PlanDetailsPage({ plan, cadence, theme, onToggleTheme, onBack, onBookNo
             ))}
           </div>
         </article>
-      </section>
+      </MotionSection>
 
-      <section className="detail-booking">
+      <MotionSection id="detail-booking" className="detail-booking">
         <div>
           <span className="eyebrow">Connect and book</span>
           <h2>Book this plan on WhatsApp and keep it connected to Smart Care.</h2>
@@ -984,8 +989,8 @@ function PlanDetailsPage({ plan, cadence, theme, onToggleTheme, onBack, onBookNo
             Back to plans
           </PrimaryButton>
         </div>
-      </section>
-    </main>
+      </MotionSection>
+    </motion.main>
   );
 }
 
@@ -1030,16 +1035,16 @@ function App() {
 
   const bookPlan = (plan, cadence) => {
     handlePlanChoose(plan, cadence);
-    openWhatsApp(`Hi E Kitchens, I want to book the ${plan.name} ${cadence} plan. Please connect me and share next steps.`);
+    openWhatsApp(`Hi Sattva Fresh, I want to book the ${plan.name} ${cadence} plan. Please connect me and share next steps.`);
   };
 
   const handleProductOrder = (product) => {
     addRecentItem(product);
-    openWhatsApp(`Hi E Kitchens, I want details for ${product.name}.`);
+    openWhatsApp(`Hi Sattva Fresh, I want details for ${product.name}.`);
   };
 
   const handleBowlBuilt = (selection) => {
-    const bowlItem = { name: `Custom bowl: ${selection.base}, ${selection.protein}, ${selection.extras}`, category: "Salad Sutra" };
+    const bowlItem = { name: `Custom bowl: ${selection.base}, ${selection.protein}, ${selection.extras}`, category: "Sattva Fresh" };
     setSmartData((current) => ({
       ...current,
       customBowl: selection,
@@ -1053,7 +1058,7 @@ function App() {
 
   const reorderMessage = () => {
     const items = smartData.recentItems.map((item) => item.name).slice(0, 3).join(", ") || "weekly healthy refill";
-    openWhatsApp(`Hi E Kitchens, please reorder my ${items}.`);
+    openWhatsApp(`Hi Sattva Fresh, please reorder my ${items}.`);
   };
 
   if (view === "smart") {
@@ -1065,7 +1070,7 @@ function App() {
         onBack={() => setView("home")}
         onPauseToggle={togglePause}
         onReorder={reorderMessage}
-        onSupport={() => openWhatsApp("Hi E Kitchens, I need help with my Smart Care delivery plan.")}
+        onSupport={() => openWhatsApp("Hi Sattva Fresh, I need help with my Smart Care delivery plan.")}
       />
     );
   }
@@ -1097,7 +1102,7 @@ function App() {
         id="lifestyle"
         eyebrow="Made for modern Indian routines"
         title="Every user sees a version of themselves."
-        copy="The homepage moves beyond grocery browsing and frames E Kitchens as a lifestyle system for consistency, time saving, and healthy convenience."
+        copy="The homepage moves beyond grocery browsing and frames Sattva Fresh as a lifestyle system for consistency, time saving, and healthy convenience."
       >
         <div className="lifestyle-grid">
           {categories.map((item) => (
@@ -1113,13 +1118,13 @@ function App() {
       <MotionSection
         id="salads"
         className="salad-section"
-        eyebrow="Salad Sutra inside E Kitchens"
+        eyebrow="Sattva Fresh inside Sattva Fresh"
         title="Premium bowls that make healthy food feel exciting."
-        copy="Salad Sutra becomes the colorful, craving-friendly face of subscriptions: weekly menus, protein bowls, calorie-aware options, and custom bowl ordering."
+        copy="Sattva Fresh becomes the colorful, craving-friendly face of subscriptions: weekly menus, protein bowls, calorie-aware options, and custom bowl ordering."
       >
         <div className="salad-layout">
           <div className="salad-media">
-            <video src="/assets/salad-motion.mp4" autoPlay muted loop playsInline poster="/assets/floating-vegetables.png" />
+            <img src="/assets/sattva_salad_bowl.png" style={{width: "100%", height: "100%", objectFit: "cover"}} alt="Fresh salad bowl" />
             <div className="salad-badge">Fresh bowl studio</div>
           </div>
           <div className="salad-content">
@@ -1155,7 +1160,7 @@ function App() {
       <MotionSection
         id="trust"
         eyebrow="Trust and local conversion"
-        title="Practical enough for Vadodara, premium enough to feel new."
+        title="Practical enough for Ahmedabad, premium enough to feel new."
       >
         <div className="trust-grid">
           {[
@@ -1181,7 +1186,7 @@ function App() {
         <div className="final-actions">
           <PrimaryButton
             icon={MessageCircle}
-            onClick={() => openWhatsApp("Hi E Kitchens, please help me start a healthy delivery plan.")}
+            onClick={() => openWhatsApp("Hi Sattva Fresh, please help me start a healthy delivery plan.")}
           >
             Start on WhatsApp
           </PrimaryButton>
@@ -1197,11 +1202,11 @@ function App() {
             <Leaf size={18} />
           </span>
           <span>
-            <strong>E Kitchens</strong>
-            <small>Fresh produce, cut vegetables, Salad Sutra bowls</small>
+            <strong>Sattva Fresh</strong>
+            <small>Fresh produce, cut vegetables, Sattva Fresh bowls</small>
           </span>
         </div>
-        <p>Vadodara focused frontend MVP. Ordering actions open WhatsApp or phone contact.</p>
+        <p>Ahmedabad focused frontend MVP. Ordering actions open WhatsApp or phone contact.</p>
       </footer>
 
       <MobileStickyCTA />
@@ -1216,7 +1221,7 @@ function MobileStickyCTA() {
         <CalendarDays size={18} />
         Plans
       </button>
-      <button type="button" onClick={() => openWhatsApp("Hi E Kitchens, I want today's menu and delivery options.")}>
+      <button type="button" onClick={() => openWhatsApp("Hi Sattva Fresh, I want today's menu and delivery options.")}>
         <MessageCircle size={18} />
         WhatsApp
       </button>
